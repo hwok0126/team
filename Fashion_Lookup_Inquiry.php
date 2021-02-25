@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title> Vote_Inquiry </title>
+    <title> Lookup_Inquiry</title>
     <style>
       body{
         margin: auto;
@@ -54,13 +54,12 @@
         left:400px;
         top:170px;
       }
-
     </style>
   </head>
   <body>
     <br><br>
-    <h1>투표시 필요한 정보를 입력해주세요</h1>
-    <form action="Vote_img.php" method="post" onsubmit='return radio_chk();'>
+    <h1>조회시 필요한 정보를 입력해주세요</h1>
+    <form action="Vote_lookup.php" method="post" onsubmit='return radio_chk();'>
       <div class="container">
         <div class="weather">
           <h2>계절을 선택해주세요</h2>
@@ -71,7 +70,6 @@
             <p></p><input type="radio" name="weather" value="겨울" /> 겨울
           </div>
         </div>
-
         <div class="sex">
           <h2>성별을 선택해주세요</h2>
           <div class="position_radio">
@@ -79,7 +77,6 @@
             <p></p><input type="radio" name="sex" value=0 /> 여자
           </div>
         </div>
-
         <div class="age">
           <h2>연령대를 선택해주세요</h2>
           <div class="position_radio">
@@ -103,29 +100,28 @@
                 weather_btn_value=weather_btn[i].value;
               }
             }
-
             for(var i=0; i<sex_btn.length; i++){
               if(sex_btn[i].checked == true){
                 sex_btn_value=sex_btn[i].value;
               }
             }
-
             for(var i=0; i<age_btn.length; i++){
               if(age_btn[i].checked == true){
                 age_btn_value=age_btn[i].value;
               }
             }
-
             if(weather_btn_value == 0 || sex_btn_value == 2 || age_btn_value == 0){
               alert("나이와 성별 계절을 모두 선택해주세요");
               return false;
             }
+            else{
+              alert(weather_btn_value + sex_btn_value + age_btn_value);
+            }
           }
         </script>
-
         <div class="submit">
           <div class=position_submit_button>
-            <input type="submit">
+            <input type="submit" value="제출"/>
           </div>
         </div>
       </div>
