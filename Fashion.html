@@ -5,49 +5,54 @@
     <title>Fashion</title>
     <!-- 합쳐지고 최소화된 최신 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
     <!-- 부가적인 테마 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
     <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <style>
-      #header {
+      .header {
+        background-position:center 43px;
+        background-repeat:no-repeat;
         text-align: center;
       }
-      #center{
+      .center{
+        background-position:center 43px;
+        background-repeat:no-repeat;
         text-align: center;
       }
       .entry-area{
         margin: auto;
-        width: 542px;
+        width: 906px;
         border: 1px solid #BDBDBD;
       }
     </style>
+    <?php
+      include 'dbcon.php';
+    ?>
   </head>
   <body>
     <div>
-      <div id="header">
+      <div class="header">
         <h1>이성이 선호하는 당신의 패션은?</h1>
       </div>
       <div class="entry-area">
-        <article id="center">
+        <article class="center">
           <hgroup>
-            <img src="" border="0" width="130" height="180" />
-            <img src="" border="0" width="130" height="180" />
-            <img src="" border="0" width="130" height="180" />
-            <img src="" border="0" width="130" height="180" />
+            <img src="<?php echo "/img/spring/spm1.jpg"; ?>" border="0" width="221" height="306" />
+            <img src="<?php echo "/img/summer/sum2.jpg"; ?>" border="0" width="221" height="306" />
+            <img src="<?php echo "/img/fall/fm3.jpg"; ?>" border="0" width="221" height="306" />
+            <img src="<?php echo "/img/winter/wim4.jpg"; ?>" border="0" width="221" height="306" />
           </hgroup>
-          <hgroup style="padding:4px;">
-            <img src="" border="0" width="130" height="180" />
-            <img src="" border="0" width="130" height="180" />
-            <img src="" border="0" width="130" height="180" />
-            <img src="" border="0" width="130" height="180" />
-            <h5 class="entry-title">이러쿵 저러쿵</h5>
+          <hgroup >
+            <img src="<?php echo "/img/spring_w/spw1.jpg"; ?>" border="0" width="221" height="306" />
+            <img src="<?php echo "/img/summer_w/suw2.jpg"; ?>" border="0" width="221" height="306" />
+            <img src="<?php echo "/img/fall_w/fw3.jpg"; ?>" border="0" width="221" height="306" />
+            <img src="<?php echo "/img/winter_w/wiw4.jpg"; ?>" border="0" width="221" height="306" />
+            <h5 class="entry-title">본인의 정보를 입력해주세요</h5>
           </hgroup>
           <div id="center_box" class="entry-box">
-            <p><a class="btn btn-primary btn-lg" href="./Fashion_Vote.html" role="button">투표</a>
-              <a class="btn btn-primary btn-lg" href="./Fashion_Vote_Inquiry.html" role="button">조회</a></p>
+            <p><a class="btn btn-primary btn-lg" href="./Fashion_Vote_Inquiry.php" role="button">투표</a>
+              <a class="btn btn-primary btn-lg" href="./Fashion_Lookup_Inquiry.php" role="button">조회</a></p>
           </div>
         </article>
       </div>
